@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}?v=2" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon/favicon-32x32.png') }}?v=2">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicon/favicon-16x16.png') }}?v=2">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='favicon/apple-touch-icon.png') }}?v=2">
+
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Find Indian government schemes you may be eligible for.">
+  <title>YojanaSetu</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="/" aria-label="YojanaSetu home">Yojana<span>Setu</span></a>
+    <div class="nav-actions">
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch to dark theme" title="Switch theme">
+        <span id="theme-icon" aria-hidden="true">☾</span>
+      </button>
+      <button class="lang-btn" id="lang-toggle" type="button" aria-label="Switch language">हिंदी</button>
+      <span class="status-dot"></span><span data-i18n="status">Free eligibility finder</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">🇮🇳 <span data-i18n="eyebrow">Government scheme discovery</span></div>
+        <h1><span data-i18n="heroTitle">Benefits you may be eligible for.</span><br><span class="hero-accent" data-i18n="heroAccent">Without the paperwork maze.</span></h1>
+        <p data-i18n="heroText">Answer simple questions. YojanaSetu matches your profile against a curated set of government schemes and explains what to do next.</p>
+        <div class="trust-row">
+          <span data-i18n="trust1">✓ Rule-based matching</span>
+          <span data-i18n="trust2">✓ No Aadhaar number requested</span>
+          <span data-i18n="trust3">✓ Official links</span>
+        </div>
+      </div>
+      <aside class="how-card" aria-label="How YojanaSetu works">
+        <div class="how-label" data-i18n="howLabel">HOW IT WORKS</div>
+        <div class="how-step"><strong>01</strong><span data-i18n="how1">Tell us about yourself</span></div>
+        <div class="how-step"><strong>02</strong><span data-i18n="how2">We check scheme rules</span></div>
+        <div class="how-step"><strong>03</strong><span data-i18n="how3">Get your next steps</span></div>
+      </aside>
+    </section>
+
+    <section class="finder" id="finder">
+      <div class="section-head">
+        <div><span class="eyebrow" data-i18n="eyebrowForm">STEP 1 OF 2</span><h2 data-i18n="formTitle">Let&#39;s find your schemes</h2></div>
+        <span class="progress" data-i18n="progress">A few quick questions · about 1 minute</span>
+      </div>
+      <form id="finder-form" novalidate>
+        <div id="form-error" class="form-error" hidden role="alert"></div>
+        <p id="step2-intro" class="step2-intro" hidden></p>
+        <div class="form-grid">
+          <label><span data-i18n="age">Age</span><input type="number" name="age" min="1" max="120" placeholder="e.g. 28" required></label>
+          <label><span data-i18n="state">State / UT</span><select name="state" required><option value="" data-i18n="selectState">Select state</option></select></label>
+          <label><span data-i18n="occupation">Occupation</span><select name="occupation" required><option value="" data-i18n="selectOccupation">Select occupation</option></select></label>
+          <label><span data-i18n="income">Annual household income (₹)</span><input type="number" name="income" min="0" step="1000" placeholder="e.g. 250000" required></label>
+          <label><span data-i18n="gender">Gender</span><select name="gender" required><option value="" data-i18n="selectGender">Select gender</option></select></label>
+          <label class="followup"><span data-i18n="poorHousehold">Does your household have a BPL or Antyodaya (AAY) ration card, or belong to an SC/ST or PMAY beneficiary family?</span><select name="poor_household"><option value="" data-i18n="selectAnswer">Select answer</option><option value="true" data-i18n="yes">Yes</option><option value="false" data-i18n="no">No</option></select></label>
+          <label class="followup"><span data-i18n="noExistingLpg">Does your household already have an LPG gas connection?</span><select name="no_existing_lpg"><option value="" data-i18n="selectAnswer">Select answer</option><option value="false" data-i18n="yes">Yes</option><option value="true" data-i18n="no">No</option></select></label>
+          <label class="followup"><span data-i18n="educationLevel">Which class or course are you studying in?</span><select name="education_level"><option value="" data-i18n="selectEducation">Select education level</option></select></label>
+          <label class="followup"><span data-i18n="taxPayer"></span><select name="tax_payer"><option value="" data-i18n="selectAnswer">Select answer</option><option value="true" data-i18n="yes">Yes</option><option value="false" data-i18n="no">No</option></select></label>
+          <label class="followup"><span data-i18n="socialSecurity"></span><select name="social_security_member"><option value="" data-i18n="selectAnswer">Select answer</option><option value="true" data-i18n="yes">Yes</option><option value="false" data-i18n="no">No</option></select></label>
+          <label class="followup"><span data-i18n="smallFarmer"></span><select name="small_farmer"><option value="" data-i18n="selectAnswer">Select answer</option><option value="true" data-i18n="yes">Yes</option><option value="false" data-i18n="no">No</option></select></label>
+          <label class="followup"><span data-i18n="traditionalTrade"></span><select name="traditional_trade"><option value="" data-i18n="selectAnswer">Select answer</option><option value="true" data-i18n="yes">Yes</option><option value="false" data-i18n="no">No</option></select></label>
+          <label class="followup"><span data-i18n="firstJob"></span><select name="first_formal_job"><option value="" data-i18n="selectAnswer">Select answer</option><option value="true" data-i18n="yes">Yes</option><option value="false" data-i18n="no">No</option></select></label>
+          <label class="followup"><span data-i18n="bplHousehold"></span><select name="bpl_household"><option value="" data-i18n="selectAnswer">Select answer</option><option value="true" data-i18n="yes">Yes</option><option value="false" data-i18n="no">No</option></select></label>
+          <label class="followup"><span data-i18n="ownsRoof"></span><select name="owns_roof_house"><option value="" data-i18n="selectAnswer">Select answer</option><option value="true" data-i18n="yes">Yes</option><option value="false" data-i18n="no">No</option></select></label>
+          <label class="followup"><span data-i18n="incomeUnder15k"></span><select name="income_under_15k"><option value="" data-i18n="selectAnswer">Select answer</option><option value="true" data-i18n="yes">Yes</option><option value="false" data-i18n="no">No</option></select></label>
+        </div>
+        <div class="form-foot"><p data-i18n="privacy">We do not ask for Aadhaar numbers or bank details. Results are indicative. Please verify eligibility on the official portal.</p><div class="actions"><button type="button" class="secondary" id="back" hidden data-i18n="back">Back</button><button type="button" class="link" id="skip" hidden data-i18n="skip">Skip and see results</button><button type="submit" data-i18n="find">Find my schemes <span>→</span></button></div></div>
+      </form>
+    </section>
+
+    <section class="results" id="results" hidden>
+      <div class="results-head"><div><span class="eyebrow" data-i18n="resultsEyebrow">Your results</span><h2><span id="count">0</span> <span data-i18n="matches">potential matches</span></h2></div><button class="secondary" id="reset" type="button" data-i18n="reset">Start over</button></div>
+      <div class="notice"><span>✓</span><div><strong data-i18n="howMatch">How we match</strong><br><span data-i18n="matchNote">Eligibility is checked using the answers you provide. Some schemes require additional verification that this finder cannot perform.</span></div></div>
+      <div id="cards" class="cards"></div>
+    </section>
+  </main>
+
+  <footer><div><strong>YojanaSetu</strong><span data-i18n="footerText">Helping citizens discover public benefits.</span></div></footer>
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

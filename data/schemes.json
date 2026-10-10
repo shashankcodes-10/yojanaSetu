@@ -1,0 +1,757 @@
+[
+  {
+    "id": "pm-kisan",
+    "name": "PM-KISAN Samman Nidhi",
+    "name_hi": "प्रधानमंत्री किसान सम्मान निधि",
+    "ministry": "Ministry of Agriculture & Farmers Welfare",
+    "benefit": "₹6,000 per year in three equal instalments for eligible landholding farmer families.",
+    "benefit_hi": "पात्र भूमिधारक किसान परिवारों को सालाना ₹6,000 तीन बराबर किस्तों में।",
+    "documents": [
+      "Aadhaar",
+      "land records",
+      "bank account details"
+    ],
+    "tags": [
+      "Farmers",
+      "Income support"
+    ],
+    "official_url": "https://pmkisan.gov.in/",
+    "eligibility": {
+      "min_age": 18,
+      "occupations": [
+        "Farmer"
+      ]
+    },
+    "ministry_hi": "कृषि और किसान कल्याण मंत्रालय",
+    "tags_hi": [
+      "किसान",
+      "आय सहायता"
+    ],
+    "documents_hi": [
+      "आधार",
+      "भूमि रिकॉर्ड",
+      "बैंक खाते का विवरण"
+    ],
+    "source_url": "https://pmkisan.gov.in/",
+    "status": "active",
+    "last_verified": "2026-10-09"
+  },
+  {
+    "id": "pmuy",
+    "name": "Pradhan Mantri Ujjwala Yojana",
+    "name_hi": "प्रधानमंत्री उज्ज्वला योजना",
+    "ministry": "Ministry of Petroleum & Natural Gas",
+    "benefit": "A deposit-free LPG connection for an eligible adult woman from a poor household, provided no LPG connection already exists in the household; final eligibility is decided by the official process. The ₹300-per-cylinder subsidy now applies to the first 4 refills a year.",
+    "benefit_hi": "गरीब परिवार की पात्र वयस्क महिला को बिना सुरक्षा-जमा LPG कनेक्शन, यदि परिवार में पहले से LPG कनेक्शन न हो; अंतिम पात्रता आधिकारिक प्रक्रिया से तय होगी। ₹300 प्रति सिलेंडर की सब्सिडी अब साल के पहले 4 रिफिल पर मिलती है।",
+    "documents": [
+      "Aadhaar",
+      "KYC form",
+      "ration card/family composition proof",
+      "bank details"
+    ],
+    "tags": [
+      "Women",
+      "LPG",
+      "Household"
+    ],
+    "official_url": "https://www.pmuy.gov.in/",
+    "eligibility": {
+      "min_age": 18,
+      "genders": [
+        "Female",
+        "Other"
+      ],
+      "poor_household": true,
+      "no_existing_lpg": true
+    },
+    "documents_hi": [
+      "केवाईसी आवेदन",
+      "आधार / पहचान प्रमाण",
+      "राशन कार्ड या परिवार संरचना का प्रमाण",
+      "बैंक खाते का विवरण",
+      "गरीब परिवार की घोषणा"
+    ],
+    "ministry_hi": "पेट्रोलियम और प्राकृतिक गैस मंत्रालय",
+    "tags_hi": [
+      "महिलाएं",
+      "LPG",
+      "परिवार"
+    ],
+    "source_url": "https://www.pmuy.gov.in/ujjwala2.html",
+    "status": "active",
+    "last_verified": "2026-10-09"
+  },
+  {
+    "id": "pmjdy",
+    "name": "Pradhan Mantri Jan-Dhan Yojana",
+    "name_hi": "प्रधानमंत्री जन-धन योजना",
+    "ministry": "Department of Financial Services, Ministry of Finance",
+    "benefit": "Basic savings bank account for people without an existing bank account, with access to financial inclusion services.",
+    "benefit_hi": "जिन लोगों का बैंक खाता नहीं है उनके लिए बेसिक सेविंग्स अकाउंट और वित्तीय सेवाओं तक पहुंच।",
+    "documents": [
+      "identity proof",
+      "address proof"
+    ],
+    "tags": [
+      "Banking",
+      "Financial inclusion"
+    ],
+    "official_url": "https://financialservices.gov.in/",
+    "eligibility": {
+      "min_age": 10
+    },
+    "ministry_hi": "वित्त मंत्रालय, वित्तीय सेवा विभाग",
+    "tags_hi": [
+      "बैंकिंग",
+      "वित्तीय समावेशन"
+    ],
+    "documents_hi": [
+      "पहचान प्रमाण",
+      "पता प्रमाण"
+    ],
+    "source_url": "https://financialservices.gov.in/",
+    "status": "active",
+    "last_verified": "2026-10-09"
+  },
+  {
+    "id": "pmjay-70",
+    "name": "Ayushman Bharat PM-JAY (70+)",
+    "name_hi": "आयुष्मान भारत PM-JAY (70+)",
+    "ministry": "National Health Authority",
+    "benefit": "Up to ₹5 lakh a year of health cover for citizens aged 70+, irrespective of income, on a family basis (70+ members of families already under PM-JAY get an extra top-up). Those on CGHS, ECHS or Ayushman CAPF must choose one scheme.",
+    "benefit_hi": "आय की परवाह किए बिना 70+ नागरिकों के लिए परिवार आधार पर सालाना ₹5 लाख तक का स्वास्थ्य कवर (PM-JAY परिवारों के 70+ सदस्यों को अतिरिक्त टॉप-अप)। CGHS, ECHS या आयुष्मान CAPF वाले एक योजना चुनें।",
+    "documents": [
+      "Aadhaar/identity documents",
+      "beneficiary verification"
+    ],
+    "tags": [
+      "Health",
+      "70+",
+      "Insurance"
+    ],
+    "official_url": "https://pmjay.gov.in/",
+    "eligibility": {
+      "min_age": 70
+    },
+    "ministry_hi": "राष्ट्रीय स्वास्थ्य प्राधिकरण",
+    "tags_hi": [
+      "स्वास्थ्य",
+      "70+",
+      "बीमा"
+    ],
+    "documents_hi": [
+      "आधार / पहचान दस्तावेज",
+      "लाभार्थी सत्यापन"
+    ],
+    "source_url": "https://pmjay.gov.in/",
+    "status": "active",
+    "last_verified": "2026-10-09"
+  },
+  {
+    "id": "nsp",
+    "name": "National Scholarship Portal",
+    "name_hi": "राष्ट्रीय छात्रवृत्ति पोर्टल",
+    "ministry": "Government of India",
+    "benefit": "A single portal to discover and apply for eligible central and other scholarship schemes.",
+    "benefit_hi": "केंद्र और अन्य छात्रवृत्ति योजनाओं को खोजने और आवेदन करने के लिए एक पोर्टल।",
+    "documents": [
+      "student ID",
+      "income/caste documents where applicable",
+      "bank details"
+    ],
+    "tags": [
+      "Students",
+      "Scholarship"
+    ],
+    "official_url": "https://scholarships.gov.in/",
+    "eligibility": {
+      "min_age": 5,
+      "max_age": 35,
+      "occupations": [
+        "Student"
+      ]
+    },
+    "ministry_hi": "भारत सरकार",
+    "tags_hi": [
+      "छात्र",
+      "छात्रवृत्ति"
+    ],
+    "documents_hi": [
+      "छात्र पहचान पत्र",
+      "जहाँ लागू हो आय / जाति प्रमाणपत्र",
+      "बैंक विवरण"
+    ],
+    "source_url": "https://scholarships.gov.in/",
+    "status": "active",
+    "last_verified": "2026-10-09"
+  },
+  {
+    "id": "pmsvanidhi",
+    "name": "PM SVANidhi",
+    "name_hi": "पीएम स्वनिधि",
+    "ministry": "Ministry of Housing & Urban Affairs",
+    "benefit": "Collateral-free working-capital loans for street vendors in tranches of ₹15,000, ₹25,000 and ₹50,000 under the extended scheme (lending period to March 2030).",
+    "benefit_hi": "रेहड़ी-पटरी वालों के लिए बिना गारंटी कार्यशील पूंजी ऋण: विस्तारित योजना में ₹15,000, ₹25,000 और ₹50,000 की किस्तें (ऋण अवधि मार्च 2030 तक)।",
+    "documents": [
+      "vendor certificate/ID or applicable LoR",
+      "identity proof",
+      "bank details"
+    ],
+    "tags": [
+      "Street vendors",
+      "Micro-credit"
+    ],
+    "official_url": "https://pmsvanidhi.mohua.gov.in/",
+    "eligibility": {
+      "min_age": 18,
+      "occupations": [
+        "Street vendor"
+      ]
+    },
+    "ministry_hi": "आवासन और शहरी कार्य मंत्रालय",
+    "tags_hi": [
+      "स्ट्रीट वेंडर",
+      "सूक्ष्म ऋण"
+    ],
+    "documents_hi": [
+      "वेंडर प्रमाणपत्र / पहचान पत्र या लागू LoR",
+      "पहचान प्रमाण",
+      "बैंक विवरण"
+    ],
+    "source_url": "https://pmsvanidhi.mohua.gov.in/",
+    "status": "active",
+    "last_verified": "2026-10-09"
+  },
+  {
+    "id": "pmsby",
+    "name": "Pradhan Mantri Suraksha Bima Yojana",
+    "name_hi": "प्रधानमंत्री सुरक्षा बीमा योजना",
+    "ministry": "Department of Financial Services, Ministry of Finance",
+    "benefit": "Accident insurance of ₹2 lakh for a premium of ₹20 a year, for bank account holders aged 18–70.",
+    "benefit_hi": "बैंक खाताधारकों (18–70 वर्ष) के लिए ₹20 सालाना प्रीमियम पर ₹2 लाख का दुर्घटना बीमा।",
+    "documents": [
+      "bank account",
+      "consent/auto-debit authorization"
+    ],
+    "tags": [
+      "Insurance",
+      "Accident cover"
+    ],
+    "official_url": "https://financialservices.gov.in/pradhan-mantri-suraksha-bima-yojana-pmsby",
+    "eligibility": {
+      "min_age": 18,
+      "max_age": 70
+    },
+    "ministry_hi": "वित्त मंत्रालय, वित्तीय सेवा विभाग",
+    "tags_hi": [
+      "बीमा",
+      "दुर्घटना कवर"
+    ],
+    "documents_hi": [
+      "बैंक खाता",
+      "सहमति / ऑटो-डेबिट अनुमति"
+    ],
+    "source_url": "https://financialservices.gov.in/pradhan-mantri-suraksha-bima-yojana-pmsby",
+    "status": "active",
+    "last_verified": "2026-10-09"
+  },
+  {
+    "id": "pmjjby",
+    "name": "Pradhan Mantri Jeevan Jyoti Bima Yojana",
+    "name_hi": "प्रधानमंत्री जीवन ज्योति बीमा योजना",
+    "ministry": "Department of Financial Services, Ministry of Finance",
+    "benefit": "Life insurance of ₹2 lakh for ₹436 a year for bank account holders aged 18–50; cover continues to age 55 if renewed.",
+    "benefit_hi": "बैंक खाताधारकों (18–50 वर्ष) के लिए ₹436 सालाना पर ₹2 लाख का जीवन बीमा; नवीनीकरण पर कवर 55 वर्ष तक।",
+    "documents": [
+      "bank account",
+      "consent/auto-debit authorization"
+    ],
+    "tags": [
+      "Insurance",
+      "Life cover"
+    ],
+    "official_url": "https://financialservices.gov.in/pradhan-mantri-jeevan-jyoti-bima-yojana",
+    "eligibility": {
+      "min_age": 18,
+      "max_age": 50
+    },
+    "ministry_hi": "वित्त मंत्रालय, वित्तीय सेवा विभाग",
+    "tags_hi": [
+      "बीमा",
+      "जीवन कवर"
+    ],
+    "documents_hi": [
+      "बैंक खाता",
+      "सहमति / ऑटो-डेबिट अनुमति"
+    ],
+    "source_url": "https://financialservices.gov.in/pradhan-mantri-jeevan-jyoti-bima-yojana",
+    "status": "active",
+    "last_verified": "2026-10-09"
+  },
+  {
+    "id": "up-general-pre-matric-scholarship",
+    "name": "Uttar Pradesh General Pre-Matric Scholarship (Class 9–10)",
+    "name_hi": "उत्तर प्रदेश सामान्य वर्ग प्री-मैट्रिक छात्रवृत्ति (कक्षा 9–10)",
+    "ministry": "Uttar Pradesh Social Welfare Department",
+    "ministry_hi": "उत्तर प्रदेश समाज कल्याण विभाग",
+    "benefit": "Financial assistance for eligible Uttar Pradesh residents in Classes 9–10. The official portal checks class, income, residence and other conditions. Registration is reported to close around late October; check the portal.",
+    "benefit_hi": "उत्तर प्रदेश के पात्र कक्षा 9–10 के विद्यार्थियों के लिए वित्तीय सहायता। आधिकारिक पोर्टल कक्षा, आय, निवास और अन्य शर्तों की जांच करता है। पंजीकरण अक्टूबर के अंत के आसपास बंद होने की सूचना है; पोर्टल देखें।",
+    "documents": [
+      "Previous marksheet",
+      "Income certificate",
+      "Bank passbook",
+      "Enrollment details",
+      "Other documents requested by the portal"
+    ],
+    "documents_hi": [
+      "पिछली परीक्षा की अंकसूची",
+      "आय प्रमाणपत्र",
+      "बैंक पासबुक",
+      "नामांकन विवरण",
+      "पोर्टल द्वारा मांगे गए अन्य दस्तावेज"
+    ],
+    "tags": [
+      "Uttar Pradesh",
+      "Students",
+      "Scholarship"
+    ],
+    "tags_hi": [
+      "उत्तर प्रदेश",
+      "छात्र",
+      "छात्रवृत्ति"
+    ],
+    "official_url": "https://scholarship.up.gov.in/",
+    "source_url": "https://www.myscheme.gov.in/schemes/gpmsup",
+    "eligibility": {
+      "min_age": 12,
+      "max_age": 20,
+      "max_income": 200000,
+      "occupations": [
+        "Student"
+      ],
+      "states": [
+        "Uttar Pradesh"
+      ],
+      "education_levels": [
+        "Class 9",
+        "Class 10"
+      ]
+    },
+    "additional_checks": [
+      "Must be studying in Class 9 or 10 at a recognized school.",
+      "Residence and other scholarship conditions must be confirmed on the official portal."
+    ],
+    "additional_checks_hi": [
+      "मान्यता प्राप्त विद्यालय में कक्षा 9 या 10 में पढ़ना आवश्यक है।",
+      "निवास और छात्रवृत्ति की अन्य शर्तों की आधिकारिक पोर्टल पर पुष्टि करें।"
+    ],
+    "status": "active",
+    "last_verified": "2026-10-09"
+  },
+  {
+    "id": "pmfby",
+    "name": "PM Fasal Bima Yojana (PMFBY)",
+    "name_hi": "प्रधानमंत्री फसल बीमा योजना",
+    "ministry": "Ministry of Agriculture & Farmers Welfare",
+    "ministry_hi": "कृषि एवं किसान कल्याण मंत्रालय",
+    "benefit": "Crop insurance against losses from natural calamities, pests and disease. Farmers pay at most 2% (Kharif), 1.5% (Rabi foodgrain and oilseeds) or 5% (commercial and horticultural crops). Tenant farmers and sharecroppers can enrol with valid cultivation documents. Rabi enrolment typically closes around 31 December; check your state notification.",
+    "benefit_hi": "प्राकृतिक आपदा, कीट और रोग से फसल नुकसान पर बीमा। किसान का प्रीमियम अधिकतम 2% (खरीफ), 1.5% (रबी खाद्यान्न/तिलहन) या 5% (वाणिज्यिक/बागवानी)। बटाईदार और काश्तकार वैध दस्तावेज़ों के साथ नामांकन कर सकते हैं। रबी नामांकन आमतौर पर दिसंबर के अंत तक; अपने राज्य की अधिसूचना देखें।",
+    "documents": [
+      "Aadhaar",
+      "Bank account",
+      "Land or cultivation records",
+      "Sowing declaration"
+    ],
+    "documents_hi": [
+      "आधार",
+      "बैंक खाता",
+      "भूमि या खेती के दस्तावेज़",
+      "बुवाई की घोषणा"
+    ],
+    "tags": [
+      "Farmers",
+      "Crop insurance"
+    ],
+    "tags_hi": [
+      "किसान",
+      "फसल बीमा"
+    ],
+    "official_url": "https://pmfby.gov.in/",
+    "source_url": "https://pmfby.gov.in/",
+    "eligibility": {
+      "min_age": 18,
+      "occupations": [
+        "Farmer"
+      ]
+    },
+    "status": "active",
+    "last_verified": "2026-10-09"
+  },
+  {
+    "id": "kcc",
+    "name": "Kisan Credit Card (KCC)",
+    "name_hi": "किसान क्रेडिट कार्ड (KCC)",
+    "ministry": "Ministry of Agriculture & Farmers Welfare",
+    "ministry_hi": "कृषि एवं किसान कल्याण मंत्रालय",
+    "benefit": "Short-term credit for farmers, fishers and animal-husbandry farmers. The interest-subvention limit is ₹5 lakh, with collateral-free credit available up to ₹2 lakh. Apply through your bank, a CSC or the PM-KISAN portal.",
+    "benefit_hi": "किसानों, मछुआरों और पशुपालकों के लिए अल्पकालिक ऋण। ब्याज सहायता की सीमा ₹5 लाख है और ₹2 लाख तक बिना गारंटी ऋण उपलब्ध है। अपने बैंक, CSC या PM-KISAN पोर्टल के ज़रिए आवेदन करें।",
+    "documents": [
+      "Aadhaar",
+      "Land records or tenancy proof",
+      "Bank account",
+      "Photograph"
+    ],
+    "documents_hi": [
+      "आधार",
+      "भूमि रिकॉर्ड या पट्टे का प्रमाण",
+      "बैंक खाता",
+      "फोटो"
+    ],
+    "tags": [
+      "Farmers",
+      "Credit"
+    ],
+    "tags_hi": [
+      "किसान",
+      "ऋण"
+    ],
+    "official_url": "https://www.financialservices.gov.in/agriculture-credit",
+    "source_url": "https://www.financialservices.gov.in/agriculture-credit",
+    "eligibility": {
+      "min_age": 18,
+      "occupations": [
+        "Farmer"
+      ]
+    },
+    "status": "active",
+    "last_verified": "2026-10-09"
+  },
+  {
+    "id": "pm-kmy",
+    "name": "PM Kisan Maandhan Yojana (PM-KMY)",
+    "name_hi": "प्रधानमंत्री किसान मान-धन योजना",
+    "ministry": "Ministry of Agriculture & Farmers Welfare",
+    "ministry_hi": "कृषि एवं किसान कल्याण मंत्रालय",
+    "benefit": "₹3,000 a month pension after age 60 for small and marginal farmers who join between 18 and 40. The government matches your monthly contribution, and the spouse gets a 50% family pension.",
+    "benefit_hi": "18–40 वर्ष में जुड़ने वाले छोटे और सीमांत किसानों को 60 वर्ष के बाद ₹3,000 मासिक पेंशन। मासिक अंशदान के बराबर सरकार भी देती है और जीवनसाथी को 50% पारिवारिक पेंशन मिलती है।",
+    "documents": [
+      "Aadhaar",
+      "Land records",
+      "Bank account with IFSC",
+      "Mobile number"
+    ],
+    "documents_hi": [
+      "आधार",
+      "भूमि रिकॉर्ड",
+      "IFSC सहित बैंक खाता",
+      "मोबाइल नंबर"
+    ],
+    "tags": [
+      "Farmers",
+      "Pension"
+    ],
+    "tags_hi": [
+      "किसान",
+      "पेंशन"
+    ],
+    "official_url": "https://maandhan.in/",
+    "source_url": "https://maandhan.in/",
+    "eligibility": {
+      "min_age": 18,
+      "max_age": 40,
+      "occupations": [
+        "Farmer"
+      ],
+      "answers": {
+        "small_farmer": true,
+        "tax_payer": false,
+        "social_security_member": false
+      }
+    },
+    "status": "active",
+    "last_verified": "2026-10-09"
+  },
+  {
+    "id": "pm-sym",
+    "name": "PM Shram Yogi Maandhan (PM-SYM)",
+    "name_hi": "प्रधानमंत्री श्रम योगी मान-धन",
+    "ministry": "Ministry of Labour & Employment",
+    "ministry_hi": "श्रम एवं रोज़गार मंत्रालय",
+    "benefit": "₹3,000 a month pension after age 60 for unorganised workers who join at 18–40 with monthly income up to ₹15,000 and who are not EPFO/ESIC/NPS members or income-tax payers. The spouse gets a 50% family pension.",
+    "benefit_hi": "18–40 वर्ष में जुड़ने वाले असंगठित कामगारों (मासिक आय ₹15,000 तक; EPFO/ESIC/NPS सदस्य या आयकरदाता नहीं) को 60 वर्ष के बाद ₹3,000 मासिक पेंशन। जीवनसाथी को 50% पारिवारिक पेंशन।",
+    "documents": [
+      "Aadhaar",
+      "Savings bank account with IFSC",
+      "Mobile number"
+    ],
+    "documents_hi": [
+      "आधार",
+      "IFSC सहित बचत खाता",
+      "मोबाइल नंबर"
+    ],
+    "tags": [
+      "Workers",
+      "Pension"
+    ],
+    "tags_hi": [
+      "कामगार",
+      "पेंशन"
+    ],
+    "official_url": "https://labour.gov.in/pm-sym",
+    "source_url": "https://labour.gov.in/pm-sym",
+    "eligibility": {
+      "min_age": 18,
+      "max_age": 40,
+      "occupations": [
+        "Informal / daily-wage worker",
+        "Street vendor",
+        "Self-employed"
+      ],
+      "answers": {
+        "tax_payer": false,
+        "social_security_member": false,
+        "income_under_15k": true
+      }
+    },
+    "status": "active",
+    "last_verified": "2026-10-09"
+  },
+  {
+    "id": "pm-vishwakarma",
+    "name": "PM Vishwakarma",
+    "name_hi": "पीएम विश्वकर्मा",
+    "ministry": "Ministry of MSME",
+    "ministry_hi": "सूक्ष्म, लघु और मध्यम उद्यम मंत्रालय",
+    "benefit": "For artisans in 18 traditional trades: certificate and ID, skill training with a ₹500 a day stipend, a ₹15,000 toolkit incentive, and collateral-free loans of ₹1 lakh then ₹2 lakh at 5% interest.",
+    "benefit_hi": "18 पारंपरिक कारीगरी व्यवसायों के कारीगरों के लिए प्रमाणपत्र और पहचान पत्र, प्रशिक्षण में ₹500 प्रतिदिन वजीफ़ा, ₹15,000 का औज़ार प्रोत्साहन और 5% ब्याज पर ₹1 लाख फिर ₹2 लाख तक बिना गारंटी ऋण।",
+    "documents": [
+      "Aadhaar",
+      "Aadhaar-linked mobile",
+      "Bank account",
+      "Proof of trade"
+    ],
+    "documents_hi": [
+      "आधार",
+      "आधार से जुड़ा मोबाइल",
+      "बैंक खाता",
+      "व्यवसाय का प्रमाण"
+    ],
+    "tags": [
+      "Artisans",
+      "Skills",
+      "Credit"
+    ],
+    "tags_hi": [
+      "कारीगर",
+      "कौशल",
+      "ऋण"
+    ],
+    "official_url": "https://pmvishwakarma.gov.in/",
+    "source_url": "https://pmvishwakarma.gov.in/",
+    "eligibility": {
+      "min_age": 18,
+      "occupations": [
+        "Self-employed",
+        "Informal / daily-wage worker"
+      ],
+      "answers": {
+        "traditional_trade": true
+      }
+    },
+    "status": "active",
+    "last_verified": "2026-10-09"
+  },
+  {
+    "id": "pm-vbry",
+    "name": "PM Viksit Bharat Rozgar Yojana (ELI)",
+    "name_hi": "प्रधानमंत्री विकसित भारत रोज़गार योजना",
+    "ministry": "Ministry of Labour & Employment",
+    "ministry_hi": "श्रम एवं रोज़गार मंत्रालय",
+    "benefit": "One month's EPF wage (up to ₹15,000) in two instalments for first-time EPFO-registered employees in jobs created between 1 August 2025 and 31 July 2027, with salary up to ₹1 lakh a month.",
+    "benefit_hi": "1 अगस्त 2025 से 31 जुलाई 2027 के बीच बनी नौकरियों में पहली बार EPFO में पंजीकृत कर्मचारियों को एक माह का EPF वेतन (अधिकतम ₹15,000) दो किस्तों में; वेतन ₹1 लाख प्रति माह तक।",
+    "documents": [
+      "Aadhaar-verified UAN",
+      "Bank account linked to Aadhaar"
+    ],
+    "documents_hi": [
+      "आधार से सत्यापित UAN",
+      "आधार से जुड़ा बैंक खाता"
+    ],
+    "tags": [
+      "Jobs",
+      "Youth"
+    ],
+    "tags_hi": [
+      "रोज़गार",
+      "युवा"
+    ],
+    "official_url": "https://pmvbry.epfindia.gov.in/",
+    "source_url": "https://pmvbry.epfindia.gov.in/",
+    "eligibility": {
+      "min_age": 18,
+      "occupations": [
+        "Private employee"
+      ],
+      "answers": {
+        "first_formal_job": true
+      }
+    },
+    "status": "active",
+    "last_verified": "2026-10-09"
+  },
+  {
+    "id": "ignoaps",
+    "name": "Indira Gandhi National Old Age Pension (NSAP)",
+    "name_hi": "इंदिरा गांधी राष्ट्रीय वृद्धावस्था पेंशन",
+    "ministry": "Ministry of Rural Development",
+    "ministry_hi": "ग्रामीण विकास मंत्रालय",
+    "benefit": "Monthly pension for BPL senior citizens: central assistance of ₹200 at ages 60–79 and ₹500 at 80 and above. Many states add their own top-up.",
+    "benefit_hi": "BPL वरिष्ठ नागरिकों के लिए मासिक पेंशन: 60–79 वर्ष पर केंद्र से ₹200 और 80+ पर ₹500। कई राज्य अपनी ओर से राशि जोड़ते हैं।",
+    "documents": [
+      "Age proof",
+      "BPL card or certificate",
+      "Aadhaar",
+      "Bank account"
+    ],
+    "documents_hi": [
+      "आयु प्रमाण",
+      "BPL कार्ड या प्रमाणपत्र",
+      "आधार",
+      "बैंक खाता"
+    ],
+    "tags": [
+      "Senior citizens",
+      "Pension"
+    ],
+    "tags_hi": [
+      "वरिष्ठ नागरिक",
+      "पेंशन"
+    ],
+    "official_url": "https://nsap.nic.in/",
+    "source_url": "https://nsap.nic.in/",
+    "eligibility": {
+      "min_age": 60,
+      "answers": {
+        "bpl_household": true
+      }
+    },
+    "status": "active",
+    "last_verified": "2026-10-09"
+  },
+  {
+    "id": "pm-surya-ghar",
+    "name": "PM Surya Ghar Muft Bijli Yojana",
+    "name_hi": "पीएम सूर्य घर मुफ़्त बिजली योजना",
+    "ministry": "Ministry of New & Renewable Energy",
+    "ministry_hi": "नवीन और नवीकरणीय ऊर्जा मंत्रालय",
+    "benefit": "Central financial assistance of up to ₹78,000 for rooftop solar on your home and lower electricity bills. For owners of houses with a suitable roof and a valid electricity connection who have not claimed a solar subsidy before.",
+    "benefit_hi": "घर की छत पर सोलर लगाने पर ₹78,000 तक की केंद्रीय सहायता और कम बिजली बिल। उन मकान-मालिकों के लिए जिनकी छत उपयुक्त है, वैध बिजली कनेक्शन है और जिन्होंने पहले सोलर सब्सिडी नहीं ली।",
+    "documents": [
+      "Electricity consumer number",
+      "Aadhaar",
+      "Bank account",
+      "Proof of house ownership"
+    ],
+    "documents_hi": [
+      "बिजली उपभोक्ता नंबर",
+      "आधार",
+      "बैंक खाता",
+      "मकान के स्वामित्व का प्रमाण"
+    ],
+    "tags": [
+      "Households",
+      "Solar"
+    ],
+    "tags_hi": [
+      "परिवार",
+      "सोलर"
+    ],
+    "official_url": "https://pmsuryaghar.gov.in/",
+    "source_url": "https://pmsuryaghar.gov.in/",
+    "eligibility": {
+      "min_age": 18,
+      "answers": {
+        "owns_roof_house": true
+      }
+    },
+    "status": "active",
+    "last_verified": "2026-10-09"
+  },
+  {
+    "id": "mudra",
+    "name": "PM Mudra Yojana (PMMY)",
+    "name_hi": "प्रधानमंत्री मुद्रा योजना",
+    "ministry": "Ministry of Finance",
+    "ministry_hi": "वित्त मंत्रालय",
+    "benefit": "Collateral-free loans up to ₹20 lakh for non-farm micro enterprises (manufacturing, trading, services) and allied activities. Categories are Shishu, Kishore, Tarun and Tarun Plus (for borrowers who repaid an earlier Tarun loan).",
+    "benefit_hi": "गैर-कृषि सूक्ष्म उद्यमों (विनिर्माण, व्यापार, सेवा) और संबद्ध गतिविधियों के लिए ₹20 लाख तक बिना गारंटी ऋण। श्रेणियाँ: शिशु, किशोर, तरुण और तरुण प्लस (पिछला तरुण ऋण चुकाने वालों के लिए)।",
+    "documents": [
+      "Aadhaar",
+      "PAN",
+      "Business proof",
+      "Bank statements",
+      "Project plan"
+    ],
+    "documents_hi": [
+      "आधार",
+      "पैन",
+      "व्यवसाय का प्रमाण",
+      "बैंक विवरण",
+      "परियोजना योजना"
+    ],
+    "tags": [
+      "Business",
+      "Credit"
+    ],
+    "tags_hi": [
+      "व्यापार",
+      "ऋण"
+    ],
+    "official_url": "https://www.mudra.org.in/",
+    "source_url": "https://www.mudra.org.in/",
+    "eligibility": {
+      "min_age": 18,
+      "occupations": [
+        "Self-employed"
+      ]
+    },
+    "status": "active",
+    "last_verified": "2026-10-09"
+  },
+  {
+    "id": "apy",
+    "name": "Atal Pension Yojana (APY)",
+    "name_hi": "अटल पेंशन योजना",
+    "ministry": "Ministry of Finance",
+    "ministry_hi": "वित्त मंत्रालय",
+    "benefit": "A guaranteed monthly pension of ₹1,000 to ₹5,000 after age 60, based on your contribution. Open to bank account holders aged 18–40 who are not income-tax payers. Continued through 2030-31.",
+    "benefit_hi": "आपके योगदान के अनुसार 60 वर्ष के बाद ₹1,000 से ₹5,000 की गारंटीशुदा मासिक पेंशन। 18–40 वर्ष के बैंक खाताधारकों के लिए जो आयकरदाता नहीं हैं। योजना 2030-31 तक जारी।",
+    "documents": [
+      "Aadhaar",
+      "Bank or post office savings account",
+      "Mobile number"
+    ],
+    "documents_hi": [
+      "आधार",
+      "बैंक या डाकघर बचत खाता",
+      "मोबाइल नंबर"
+    ],
+    "tags": [
+      "Pension"
+    ],
+    "tags_hi": [
+      "पेंशन"
+    ],
+    "official_url": "https://financialservices.gov.in/atal-pension-yojana-apy",
+    "source_url": "https://financialservices.gov.in/atal-pension-yojana-apy",
+    "eligibility": {
+      "min_age": 18,
+      "max_age": 40,
+      "answers": {
+        "tax_payer": false
+      }
+    },
+    "status": "active",
+    "last_verified": "2026-10-09"
+  }
+]
