@@ -136,7 +136,7 @@ jobs:
           set -e
           ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
           BUCKET="elasticbeanstalk-${AWS_REGION}-${ACCOUNT_ID}"
-          VERSION="${GITHUB_SHA::12}-${GITHUB_RUN_NUMBER}"
+          VERSION="${GITHUB_SHA::12}-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
           S3_KEY="${EB_APP}/${VERSION}.zip"
 
           aws s3 cp bundle.zip "s3://${BUCKET}/${S3_KEY}"
