@@ -1,57 +1,166 @@
-name: CI
+
+name: CI and Deploy
+
 on:
   push:
     branches: [main]
   pull_request:
     branches: [main]
+
+permissions:
+  contents: read
+
 jobs:
   test-and-build:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
-      - run: python -m pip install -r requirements-dev.txt
-      - run: python -m pytest -q
-      - run: docker build -t yojanasetu:test .
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: python -m pip install -r requirements-dev.txt
+
+      - name: Run tests
+        run: python -m pytest -q
+
+      - name: Build Docker image
+        run: docker build -t yojanasetu:test .
+
       - name: Smoke test the container
+        shell: bash
         run: |
+          set -e
           docker run -d --name ys -p 8000:8000 yojanasetu:test
-          for i in $(seq 1 15); do curl -fsS http://127.0.0.1:8000/health && break || sleep 2; done
+          trap 'docker rm -f ys >/dev/null 2>&1 || true' EXIT
+
+          for i in $(seq 1 15); do
+            if curl -fsS http://127.0.0.1:8000/health; then
+              break
+            fi
+            sleep 2
+          done
+
           curl -fsS http://127.0.0.1:8000/health
           docker logs ys
-          if docker run --rm yojanasetu:test python -m pip --version; then echo "pip is still in the image"; exit 1; fi
-      - name: Scan image for vulnerabilities (report only)
-        continue-on-error: true
-        run: docker run --rm -v /var/run/docker.sock:/var/run/docker.sock aquasec/trivy:0.57.0 image --severity HIGH,CRITICAL --ignore-unfixed yojanasetu:test
 
-  # Runs only on pushes to main, and only once the EB_ENV_NAME repository variable exists.
+          if docker run --rm yojanasetu:test python -m pip --version; then
+            echo "pip is still in the image"
+            exit 1
+          fi
+
+      - name: Scan image for vulnerabilities
+        continue-on-error: true
+        run: |
+          docker run --rm \
+            -v /var/run/docker.sock:/var/run/docker.sock \
+            aquasec/trivy:0.57.0 image \
+            --severity HIGH,CRITICAL \
+            --ignore-unfixed yojanasetu:test
+
   deploy:
     needs: test-and-build
-    if: github.event_name == 'push' && vars.EB_ENV_NAME != ''
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     concurrency: eb-deploy
+
+    permissions:
+      contents: read
+      id-token: write
+
     env:
-      AWS_REGION: ${{ vars.AWS_REGION }}
-      EB_APP: ${{ vars.EB_APP_NAME }}
-      EB_ENV: ${{ vars.EB_ENV_NAME }}
+      AWS_REGION: us-west-2
+      EB_APP: yojanasetu
+      EB_ENV: yojanasetu-prod
+      AWS_ROLE_ARN: arn:aws:iam::593489477004:role/yojanasetu-github-deploy-role
+      DOCKER_IMAGE: shashank971/yojanasetu
+
     steps:
       - uses: actions/checkout@v4
-      - uses: aws-actions/configure-aws-credentials@v4
+
+      - name: Configure AWS credentials using OIDC
+        uses: aws-actions/configure-aws-credentials@v4
         with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: ${{ vars.AWS_REGION }}
-      - name: Build source bundle
-        run: zip -r bundle.zip Dockerfile requirements.txt app data .ebextensions
-      - name: Upload and deploy to Elastic Beanstalk
+          role-to-assume: ${{ env.AWS_ROLE_ARN }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Build and push image
+        env:
+          IMAGE_TAG: ${{ github.sha }}
         run: |
-          ACCOUNT=$(aws sts get-caller-identity --query Account --output text)
-          BUCKET="elasticbeanstalk-${AWS_REGION}-${ACCOUNT}"
-          VERSION="${GITHUB_SHA::8}-${GITHUB_RUN_NUMBER}"
-          aws s3 cp bundle.zip "s3://${BUCKET}/${EB_APP}/${VERSION}.zip"
-          aws elasticbeanstalk create-application-version --application-name "$EB_APP" \
-            --version-label "$VERSION" --source-bundle S3Bucket="$BUCKET",S3Key="${EB_APP}/${VERSION}.zip"
-          aws elasticbeanstalk update-environment --environment-name "$EB_ENV" --version-label "$VERSION"
-          aws elasticbeanstalk wait environment-updated --application-name "$EB_APP" --environment-name "$EB_ENV"
+          set -e
+          docker build \
+            --label "org.opencontainers.image.revision=${GITHUB_SHA}" \
+            -t "${DOCKER_IMAGE}:${IMAGE_TAG}" .
+          docker push "${DOCKER_IMAGE}:${IMAGE_TAG}"
+
+      - name: Create Elastic Beanstalk deployment bundle
+        env:
+          IMAGE_TAG: ${{ github.sha }}
+        run: |
+          mkdir -p eb-bundle
+
+          cat > eb-bundle/Dockerrun.aws.json <<EOF
+          {
+            "AWSEBDockerrunVersion": "1",
+            "Image": {
+              "Name": "${DOCKER_IMAGE}:${IMAGE_TAG}",
+              "Update": "true"
+            },
+            "Ports": [
+              {
+                "ContainerPort": "8000"
+              }
+            ]
+          }
+          EOF
+
+          cat eb-bundle/Dockerrun.aws.json
+          cd eb-bundle
+          zip ../bundle.zip Dockerrun.aws.json
+          cd ..
+
+      - name: Upload bundle and create application version
+        env:
+          IMAGE_TAG: ${{ github.sha }}
+        run: |
+          set -e
+          ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
+          BUCKET="elasticbeanstalk-${AWS_REGION}-${ACCOUNT_ID}"
+          VERSION="${GITHUB_SHA::12}-${GITHUB_RUN_NUMBER}"
+          S3_KEY="${EB_APP}/${VERSION}.zip"
+
+          aws s3 cp bundle.zip "s3://${BUCKET}/${S3_KEY}"
+
+          aws elasticbeanstalk create-application-version \
+            --application-name "$EB_APP" \
+            --version-label "$VERSION" \
+            --source-bundle S3Bucket="$BUCKET",S3Key="$S3_KEY" \
+            --process
+
+          aws elasticbeanstalk update-environment \
+            --application-name "$EB_APP" \
+            --environment-name "$EB_ENV" \
+            --version-label "$VERSION"
+
+          aws elasticbeanstalk wait environment-updated \
+            --application-name "$EB_APP" \
+            --environment-names "$EB_ENV"
+
+      - name: Verify deployment
+        run: |
+          aws elasticbeanstalk describe-environments \
+            --application-name "$EB_APP" \
+            --environment-names "$EB_ENV" \
+            --region "$AWS_REGION" \
+            --query 'Environments[].[Status,Health,HealthStatus,CNAME]' \
+            --output table
